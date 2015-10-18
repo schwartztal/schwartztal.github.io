@@ -1,0 +1,29 @@
+
+#profile_image{
+    height:75px;
+    width:75px;
+    margin:25px;
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+
+#top_buttons{
+    position:fixed;
+    top:25px;
+    width:50%;
+    margin-left:25%;
+
+}
+
+.header{
+    height:125px;
+width:100%;
+margin-left:10%;
+}
+
+.posts{
+    margin:25px;
+    margin-top:150px;
+}
