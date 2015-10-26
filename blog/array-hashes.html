@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<head>
+	<title> Tal's DBC Blog</title>
+	 <meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+  	<link type="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+
+</head>
+<header>
+  <nav class="header">
+    
+  <div id="top_buttons">
+    <a class="button-top" href="http://schwartztal.github.io/blog/index.html"> Blog </a>
+    <a class="button-top" href="http://schwartztal.github.io/projects.html"> Projects </a>
+    <a class="button-top" href="http://schwartztal.github.io/resume.html"> Resume </a>
+  </div>
+    <img id="profile_image" src="../imgs/profile_picture_circle.png">
+  </nav>
+  </header>
+
+<main class="posts">
+	<article>
+
+		<title> <h1> Keeping Track -  Arrays and Hashes </h1></title>
+		<p> Ruby provides two primary tools for storing collections of objects: Arrays and Hashes. In this post we'll explore both options and discuss briefly when you might want to use each</p>
+
+			<h3>Arrays</h3>
+			<p> Arrays are an ordered collection of objects (strings, integers or floats) where the index value (or key) for each object is an integer which represents its location within the list. Creating a new array is easy and can be done in a number of ways: </p>
+
+			<pre><code>
+				Empty Array:
+				new_array = Array.new
+				new_array = []
+				or initialized with values:
+				new_array = Array.new(3,2)
+				new_array = [2, 2, 2]
+			</code></pre>
+
+		<h3>Hashes</h3>
+			<p> Hashes are similiar to Arrays in Ruby but have the added flexibility of using any String as the key for the ordered object.	This ability to assign objects to a self-defined key allows us to create a dictionary of sorts. Hash key-value pairs are also locatable by Integer location within the index so in a sense Arrays are just a simplified subset of Hashes. Hashes are created in a similiar way as Arrays but use the brace instead of square bracket</p>
+			<pre><code>
+				Empty Hash:
+				new_hash = Hash.new
+				new_hash = {}
+				or initialized with values:
+				new_hash = Hash.new("default value")
+				new_hash = {"key","value","key","value"}
+			</code></pre>
+
+			<h3> To Array or To Hash?</h3>
+			<p>When evaluating how to collect a set of related information stored in Ruby objects the primary consideration betwen Hashes and Arrays are whether the information needs be classified with Keys that are not just a location. In plain english, whether the more intelligent classification of a piece of information like "123 Main Street" is in fact "Address" rather than "Index location 2". <br>
+			</p>
+			<p> One other consideration that will come into play later in our exploration of written good Ruby code is that Arrays execute more quickly than Hashes because they can be indexed more efficiently. More on this topic at a future date. 
+
+	</article>
+	
+	<footer>
+    <a class="button-bot" href="mailto:schwartztal@gmail.com"> Contact </a>
+    <a class="button-bot" href="http://schwartztal.github.io/about.html"> About Me</a>
+    <a class="button-bot" href="http://schwartztal.github.io/social.html"> Social </a>
+  </footer>
+	
+</main>
+
