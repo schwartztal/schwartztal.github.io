@@ -31,18 +31,18 @@ The enumerable methods provide for an easy way to interact with and modify (if d
 
 <p> For example, if we have an array <i>a</i> and want to add 1 to each of the elements in that array and call it b we could use map as such: </p>
 <code>
-a = [1, 2, 3, 4, 5]
-b = a.map{|x| x + 1}
-  => [2, 3, 4, 5, 6]
-p a
-  => [1, 2, 3, 4, 5]
+a = [1, 2, 3, 4, 5]<br>
+b = a.map{|x| x + 1}<br>
+  => [2, 3, 4, 5, 6]<br>
+p a<br>
+  => [1, 2, 3, 4, 5]<br>
 </code>
 
 <p>We could also use map to modify the elements if they are strings, like making everything lowercase</p>
 <code>
-  names = ["Bob", "Harry", "Sally", "SARAH"]
-  lowercase_names = names.map{|x| x.downcase}
-    => ["bob", "harry", "sally", "sarah"]
+  names = ["Bob", "Harry", "Sally", "SARAH"]<br>
+  lowercase_names = names.map{|x| x.downcase}<br>
+    => ["bob", "harry", "sally", "sarah"]<br>
 </code>
 
 <p>So far, map is looking a lot like a loop through the collection using <i>.each</i>. And in fact all of the Enumerator methods that loop through the collection are based on #each. The benefit of map is that it returns the output in a new collection and so doesn't need to be initalized with an empty collection to receive changes. This can be quite useful in writing clear and conside re-factored code when chaining the map operation with other methods.</p>
@@ -51,11 +51,11 @@ p a
 <p>So far we've only looked at .map which returns a whole new collection modified by the provided block. Sometimes though you DO want to change the underlying collection and that's where .map! comes in.</p>
 
 <code>
-a = [1, 2, 3, 4, 5]
- a.map!{|x| x + 1}
-  => [2, 3, 4, 5, 6]
-  p a
-  => [2, 3, 4, 5, 6]
+a = [1, 2, 3, 4, 5]<br>
+ a.map!{|x| x + 1}<br>
+  => [2, 3, 4, 5, 6]<br>
+  p a<br>
+  => [2, 3, 4, 5, 6]<br>
 </code>
 
 
