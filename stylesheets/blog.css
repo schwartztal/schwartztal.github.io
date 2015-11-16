@@ -28,6 +28,10 @@ margin-left:10%;
     margin-top:150px;
 }
 
+code{
+    background-color:#7FB1B3;
+}
+
 article > div{
     display:inline-block;
     padding:25px;
