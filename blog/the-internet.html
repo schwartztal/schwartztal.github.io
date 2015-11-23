@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<head>
+	<title> Tal's DBC Blog</title>
+	 <meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+  	<link type="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+
+</head>
+<header>
+  <nav class="header">
+
+  <div id="top_buttons">
+    <a class="button-top" href="http://schwartztal.github.io/blog/index.html"> Blog </a>
+    <a class="button-top" href="http://schwartztal.github.io/projects/index.html"> Projects </a>
+    <a class="button-top" href="http://schwartztal.github.io/resume.html"> Resume </a>
+  </div>
+    <img id="profile_image" src="../imgs/profile_picture_circle.png">
+  </nav>
+  </header>
+
+<main class="posts">
+
+	<article>
+		    <title> The Internet & CDN </title>
+        <h1> The Internet & CDN </h1>
+        <h4>A beautifully messy thing</h4>
+
+        <p> For the last 5 years I've worked at <a href="http://www.akamai.com">Akamai Technologies</a> the original Content Delivery Network (CDN) that specializes in helping companies make the internet work better for their users. From a small e-commerce startup to an internet giant like Facebook and nearly every major brand in between with an online presence, companies turn to CDN's to fix a fundamental flaw of the internet. Today we'll talk a bit about that flaw and how a service like Akamai can ensure that your users in Vietnam have a good experience when your site is hosted on a server in New Jersey.</p>
+
+        <h4> The OSI Model </h4>
+        <p> Before we dive right in to the problem, let's locate ourselves in the complex world that is behind the scenes of making that funny cat picture load. The OSI model is the standard reference model used to discuss the various layers (from the physical hardware boxes and cables to the interactive applications designed by developers) involved in communication between two endpoints or users in a network. This works equally well for a local area network or for the entire internet.</p>
+        <figure>
+        <img id="map" src="./imgs/osi7.gif">
+        <figcaption> OSI 7 Layer Model of the Internet  </figcaption>
+        </figure>
+
+         <p>Today's discussion will focus on layer 3 - the network layer - which exists just above the physical world (hardware and control). It's layer 3 that controls what happens once the information leaves your computer en-route to a server: where information flows, how it is routed and what happens if there are problems along the way. </p>
+
+        <h4> A network of networks</h4>
+        <p> It's fine for most use cases to think of The Internet as one big cloud where your computer connects through a modem and similiarly a server connects somewhere else. But looking in a little closer and we see that the internet is actually built of thousands of independently controlled networks (known as an Autonomous System) each with it's own unique number (ASN). An AS can be your local ISP (I use Monkey Brains in San Francisco), a University or Corporate network or one of the major backbones of the internet like Layer3. The image below is grossly simplified but shows the typical types of networks that exist in the internet.  </p>
+
+        <figure>
+        <img id="map" src="./imgs/network.png">
+        <figcaption> A network view of the internet - Akamai Technologies </figcaption>
+        </figure>
+
+        <p>For fun, here's a more realistic representation of what the internet actually looks like based on some mapping done by researchers in 2004</p>
+
+        <figure>
+        <img id="map" src="./imgs/network_complex.jpg">
+        <figcaption> Map of the Internet in 2004 (https://www.flickr.com/photos/jurvetson/916142/)  </figcaption>
+        </figure>
+
+        <h4> Getting from Network to Network</h4>
+        <p> Border Gateway Protocol (BGP) is the standard used by all AS's to broadcast and exchange their routing and reachability information. BGP routing information is defined by the network administrator and is exchanged between neighboring AS that share a physical link connection. The logic that goes into defining that network is a mix of optiziming paths between networks and the business conditions (link capacity available, contractual agreements, etc) of any particular AS. To get from your home machine to a server information may traverse a few dozen networks along the way and conditions of those networks is not known when routing decisions are made. More than that, neither end point of the communication (user and server) have any control over routing decisions made along the way. This can lead to degradation in performance in a number of scenarios ranging from the mundane (links over capacity, on-going maintanence or even a cable cut) to the nefarious (two ISP's in a contractual negotation holding traffic hostage).</p>
+
+        <h4> Enter the CDN </h4>
+        <p> While they're still subject to BGP routing (sorry folks, no way around this) Content Delivery Networks can help avoid slowdown in transit by maintaining a much larger and more widely distributed footprint of servers and choosing intelligently based on their view of network conditions which server to use for a given end user request. Closer isn't always better as there may be issues on that particular route, so algorithms for server selection are both highly complicated and closely guarded, but overally the larger footprint can bring substantial benefits in performance. </p>
+
+	</article>
+
+	<footer>
+    <a class="button-bot" href="mailto:schwartztal@gmail.com"> Contact </a>
+    <a class="button-bot" href="http://schwartztal.github.io/about.html"> About Me</a>
+    <a class="button-bot" href="http://schwartztal.github.io/social.html"> Social </a>
+  </footer>
+
+</main>
+
