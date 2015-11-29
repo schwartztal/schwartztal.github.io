@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<head>
+	<title> Tal's DBC Blog</title>
+	 <meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+  	<link type="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+
+</head>
+<header>
+  <nav class="header">
+
+  <div id="top_buttons">
+    <a class="button-top" href="http://schwartztal.github.io/blog/index.html"> Blog </a>
+    <a class="button-top" href="http://schwartztal.github.io/projects/index.html"> Projects </a>
+    <a class="button-top" href="http://schwartztal.github.io/resume.html"> Resume </a>
+  </div>
+    <img id="profile_image" src="../imgs/profile_picture_circle.png">
+  </nav>
+  </header>
+
+<main class="posts">
+
+	<article>
+		<title>Ruby Classes </title>
+    <h1> Ruby Classes </h1>
+		<h4>a neighborly example</h4>
+
+<p> Ruby classes are a useful way to define a set of characteristics and behaviors once for a set of related objects that can be used and re-used any number of times. The blueprint analogy for constructing a house has resonated most with me as we learn about Ruby classes: you create the framework by which all houses will be created and then quickly and efficiently create many houses which have the same behaviors but can still be unique through varying charcteristics. We'll stick with that analogy of a blueprint and examine how a Ruby class can help keep track of a growing Neighborhood.  </p>
+
+
+<p> Unlike in previous weeks where our work was focused entirely on an object or method and everything is done within that limited scope, when we enter the realm of defining classes we need to start considering the scope of variables we use. In this week we begin to use class and instance variables in addition to the local variable. Syntax of these new variables in Ruby is:  </p>
+
+<code>
+local variable - address (usable within the limited scope in which it is defined, typically a method or loop)<br>
+instance variable - @address (unique to an instantiated object of a class)<br>
+class variable - @@address (unique to that class and shared amongst all instances of the class, or "global within the class" )<br>
+global variable - $address (not used this week but relevant for context, this is accessible anywhere within Ruby)<br>
+ </code>
+<p>
+Let's explore how to use class and instance variables with an example. Here we define a class "neighbors" that will create objects to hold information about each of my neighbors and a method to update family members.</p>
+
+<code>
+class neighbors<br>
+<br>
+@@neighbors = 0<br>
+@@neighborhood = "Cherry Hills"<br>
+<br>
+attr_accessor :address<br>
+attr_accessor :family_members<br>
+attr_accessor :pets<br>
+attr_accessor :neighborhood<br>
+<br>v
+def initialize (address, family_members, pets)<br>
+  @address = address<br>
+  @family_members = family_members<br>
+  @pets = pets<br>
+  @@neighbors += 1<br>
+end<br>
+<br>
+def update_family(family_members)<br>
+  @family_members = family_members<br>
+end<br>
+<br>
+def update_neighborhood(new_neighborhood_name)<br>
+  @@neighborhood = new_neighborhood_name<br>
+end<br>
+end<br>
+</code>
+<p> In this simple example we have a mix of variables scopes in use (local, instance and class). The local variable usage is limited to holding the arguments passed in during initalization of the object instance (i.e. "address"). Instance variables are used to then attach those arguments to the object and update the object when the update_family method is called with a new set of family_members. Finally the class variables @@neighbors and @@neighborhood are declared once when we set up the class and modified within the code. </p>
+
+<p> The reason we use instance variables for address,family_members and pets is that the information these variables contain will be different for each instance of the class (each household) and so should be tied only to the object that is a part of that class.</p>
+
+<p> The number of neighbors and name of the neighborhood are variables which are common to all households, and though they may change (new houses are built, or we vote to change the name) such a change would propogate immediately to all households and so it makes the most sense to keep them in the parent object of houseolds... which is the class neighbors</p>
+
+	</article>
+
+	<footer>
+    <a class="button-bot" href="mailto:schwartztal@gmail.com"> Contact </a>
+    <a class="button-bot" href="http://schwartztal.github.io/about.html"> About Me</a>
+    <a class="button-bot" href="http://schwartztal.github.io/social.html"> Social </a>
+  </footer>
+
+</main>
+

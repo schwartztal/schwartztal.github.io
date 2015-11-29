@@ -1,52 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Tal's DBC Blog</title>
-  <meta charset="UTF-8">
-  <link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
-  <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Tal's Blog</title>
+
+    <link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" />
+	<link href="../assets/css/get-shit-done.css" rel="stylesheet" />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+
+    <!--     Font Awesome     -->
+    <link href="../bootstrap3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
 
 </head>
 
 <body>
-<header>
-  <nav class="header">
-    
-  <div id="top_buttons">
-    <a class="button-top" href="http://schwartztal.github.io/blog/index.html"> Blog </a>
-    <a class="button-top" href="http://schwartztal.github.io/projects.html"> Projects </a>
-    <a class="button-top" href="http://schwartztal.github.io/resume.html"> Resume </a>
-  </div>
-    <img id="profile_image" src="../imgs/profile_picture_circle.png">
-  </nav>
-  </header>
+    <div id="navbar">
+        <nav class="navbar navbar-default navbar-ct-blue">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <img id="profile-image" src="../imgs/profile_picture_circle.png">
+                    <a class="navbar-brand" href="http://schwartztal.github.io/index.html">Tal's Thoughts</a>
+                </div>
 
-<main class="posts">
-  <h1>Git Control to Major Tom</h1>
-  <h4>October 4th 2015</h4>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="http://schwartztal.github.io/blog/index.html">Blog</a></li>
+                        <li class="inactive"><a href="http://schwartztal.github.io/projects/index.html">Projects</a></li>
+                        <li class="inactive"><a href="mailto:schwartztal@gmail.com">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://schwartztal.github.io/about.html">About Me</a></li>
+                                <li><a href="http://schwartztal.github.io/social.html">Social</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.linkedin.com/in/schwartztal">LinkedIn</a></li>
+                                <li><a href="http://schwartztal.github.io/resume.html">Resume</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div><!--  end navbar -->
 
-  <section>
+
+<div class="main">
+    <div class="container tim-container" style="max-width:800px; padding-top:0px">
+       <h1 class="text-center">Git Control to Major Tom<small class="subtitle">October 8th 2015</small></h1>
+       <section>
     <p>
-      As Week 1 of Dev Bootcamp Phase 0 is drawing to an end, I find myself thinking about how much I've learned already and how that barely scratches the surface of what's to come. The good thing is I feel comfortable in the fundamentals that we've spent most of the week focused on: interfacing through the command line and the basics of code version control. Version control is near and dear to my heart from a previous life as a mechanical engineer designing complex downhole (in the well) oil production equipment, but it takes on a whole new meaning when applied to software. If you'll bear with me for a few minutes, I'd like to expound on the virtues of git and GitHub. 
+      As Week 1 of Dev Bootcamp Phase 0 is drawing to an end, I find myself thinking about how much I've learned already and how that barely scratches the surface of what's to come. The good thing is I feel comfortable in the fundamentals that we've spent most of the week focused on: interfacing through the command line and the basics of code version control. Version control is near and dear to my heart from a previous life as a mechanical engineer designing complex downhole (in the well) oil production equipment, but it takes on a whole new meaning when applied to software. If you'll bear with me for a few minutes, I'd like to expound on the virtues of git and GitHub.
     </p>
- <h3> Git it</h3>
+ <h4> Git it</h4>
     <p>
-        Whether working by yourself or collaborating with others, a version control system is a valuable tool for keeping track of the most recent iteration of code that's been written along with a history of changes made along the way. Like save points in a video game, if you make a mistake you can roll back to a previous "known-good" state and try again. This can save hours of frustrating time spent hunting down where that one extra space was introduced that brought everything to a grinding halt. 
+        Whether working by yourself or collaborating with others, a version control system is a valuable tool for keeping track of the most recent iteration of code that's been written along with a history of changes made along the way. Like save points in a video game, if you make a mistake you can roll back to a previous "known-good" state and try again. This can save hours of frustrating time spent hunting down where that one extra space was introduced that brought everything to a grinding halt.
     </p>
     <p>
         Git is the version control system we'll be using through DBC and it brings a couple of cool features to the table when compared to other options out there like SVN. First and foremost, each instance of Git is a fully formed and functional repository. Whether you're connected and working online with the central repository or on a beach somewhere with no hope of a data connection, with Git you can keep working without any fear of getting hopelessly out of sync. Next, Git plays nice with a remote repository when you do get back online and makes the check-in and rationalization process pretty painless. Finally, Git keeps track of each commit with a unique hash which includes details about the heritage of that commit which makes it easy to keep track of where a particular set of changes originated and easy to roll back if needed.
     </p>
     <p>
-      Add GitHub to the mix and you've got a pretty great system for collaboration with others locally and remotely, in your timezone or halfway around the world. As a cloud based solution that speaks seamlessly to the local Git instance on your machine, you get the benefit of cloud (always available, copies stored remotely for DR,  asynhcronous collaboration) with the ability to work when and where it's convenient for you, checking code back in on your own schedule. 
+      Add GitHub to the mix and you've got a pretty great system for collaboration with others locally and remotely, in your timezone or halfway around the world. As a cloud based solution that speaks seamlessly to the local Git instance on your machine, you get the benefit of cloud (always available, copies stored remotely for DR,  asynhcronous collaboration) with the ability to work when and where it's convenient for you, checking code back in on your own schedule.
     </p>
 <p>
       Another benefit of GitHub is the ease of use as a portfolio of work and a demonstration of progression in the learning experience when it comes time to find a job.  By keeping track of our work along the way, it'll provide a great starting point for pulling together examples of solo and collaborative development that prove to potential employeers that we can DO, not just talk.
 </p>
       <!-- copy and paste as many sections as you want to add paragraphs -->
   </section>
-</main>
-<footer>
-    <a class="button-bot" href="mailto:schwartztal@gmail.com"> Contact </a>
-    <a class="button-bot" href="http://schwartztal.github.io/about.html"> About Me</a>
-    <a class="button-bot" href="http://schwartztal.github.io/social.html"> Social </a>
-  </footer>
+    </div>
+
+    <div class="space"></div>
+<!-- end container -->
+</div>
+<!-- end main -->
+
+
+
 </body>
+
+    <script src="../jquery/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+
+	<script src="../bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+<!--//<script src="assets/js/gsdk-checkbox.js"></script>
+	// <script src="assets/js/gsdk-radio.js"></script>
+	// <script src="assets/js/gsdk-bootstrapswitch.js"></script> -->
+	<script src="../assets/js/get-shit-done.js"></script>
+
+    <script src="../assets/js/custom.js"></script>
+</html>

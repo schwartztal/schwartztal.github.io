@@ -1,33 +1,60 @@
-<!DOCTYPE HTML>
+<!doctype html>
+<html lang="en">
 <head>
-	<title> Tal's DBC Blog</title>
-	 <meta charset="UTF-8">
-	<link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
-  	<link type="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Enumerable#Map</title>
+
+    <link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" />
+	<link href="../assets/css/get-shit-done.css" rel="stylesheet" />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+
+    <!--     Font Awesome     -->
+    <link href="../bootstrap3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
 
 </head>
-<header>
-  <nav class="header">
 
-  <div id="top_buttons">
-    <a class="button-top" href="http://schwartztal.github.io/blog/index.html"> Blog </a>
-    <a class="button-top" href="http://schwartztal.github.io/projects.html"> Projects </a>
-    <a class="button-top" href="http://schwartztal.github.io/resume.html"> Resume </a>
-  </div>
-    <img id="profile_image" src="../imgs/profile_picture_circle.png">
-  </nav>
-  </header>
+<body>
+    <div id="navbar">
+        <nav class="navbar navbar-default navbar-ct-blue">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <img id="profile-image" src="../imgs/profile_picture_circle.png">
+                    <a class="navbar-brand" href="http://schwartztal.github.io/index.html">Tal's Thoughts</a>
+                </div>
 
-<main class="posts">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="http://schwartztal.github.io/blog/index.html">Blog</a></li>
+                        <li class="inactive"><a href="http://schwartztal.github.io/projects/index.html">Projects</a></li>
+                        <li class="inactive"><a href="mailto:schwartztal@gmail.com">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://schwartztal.github.io/about.html">About Me</a></li>
+                                <li><a href="http://schwartztal.github.io/social.html">Social</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.linkedin.com/in/schwartztal">LinkedIn</a></li>
+                                <li><a href="http://schwartztal.github.io/resume.html">Resume</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div><!--  end navbar -->
 
-	<article>
-	<title> <h1> Enumerable#Map </h1></title>
-		<h4>A quick how to for the #map method for enumerables</h4>
-<p>
+
+<div class="main">
+    <div class="container tim-container" style="max-width:800px; padding-top:0px">
+       <h1 class="text-center"> Enumerable#Map <small class="subtitle">A quick how to for the #map method for enumerables<br> November 2nd 2015</small></h1>
+      <p>
 The enumerable methods provide for an easy way to interact with and modify (if desired) a collection of elements. In this post we'll be looking at the #map method which goes through each element of the collection, executes some logic and returns the output into a new collection.</p>
 
 <p>The map method runs through each element in the collection and returns the results of running block with obj passed in. It is a non-destructive method which does not alter the element on which it was called. The syntax for map is: </p>
-<code> map { |obj| block } --> array </code>
+<code> map { |obj| block } --> array </code><br><br>
 
 <p> For example, if we have an array <i>a</i> and want to add 1 to each of the elements in that array and call it b we could use map as such: </p>
 <code>
@@ -35,14 +62,14 @@ a = [1, 2, 3, 4, 5]<br>
 b = a.map{|x| x + 1}<br>
   => [2, 3, 4, 5, 6]<br>
 p a<br>
-  => [1, 2, 3, 4, 5]<br>
+  => [1, 2, 3, 4, 5]<br><br>
 </code>
 
 <p>We could also use map to modify the elements if they are strings, like making everything lowercase</p>
 <code>
   names = ["Bob", "Harry", "Sally", "SARAH"]<br>
   lowercase_names = names.map{|x| x.downcase}<br>
-    => ["bob", "harry", "sally", "sarah"]<br>
+    => ["bob", "harry", "sally", "sarah"]<br><br>
 </code>
 
 <p>So far, map is looking a lot like a loop through the collection using <i>.each</i>. And in fact all of the Enumerator methods that loop through the collection are based on #each. The benefit of map is that it returns the output in a new collection and so doesn't need to be initalized with an empty collection to receive changes. This can be quite useful in writing clear and conside re-factored code when chaining the map operation with other methods.</p>
@@ -58,14 +85,24 @@ a = [1, 2, 3, 4, 5]<br>
   => [2, 3, 4, 5, 6]<br>
 </code>
 
+    </div>
+    <div class="space"></div>
+<!-- end container -->
+</div>
+<!-- end main -->
 
-	</article>
 
-	<footer>
-    <a class="button-bot" href="mailto:schwartztal@gmail.com"> Contact </a>
-    <a class="button-bot" href="http://schwartztal.github.io/about.html"> About Me</a>
-    <a class="button-bot" href="http://schwartztal.github.io/social.html"> Social </a>
-  </footer>
 
-</main>
+</body>
 
+    <script src="../jquery/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+
+	<script src="../bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+<!--//<script src="assets/js/gsdk-checkbox.js"></script>
+	// <script src="assets/js/gsdk-radio.js"></script>
+	// <script src="assets/js/gsdk-bootstrapswitch.js"></script> -->
+	<script src="../assets/js/get-shit-done.js"></script>
+
+    <script src="../assets/js/custom.js"></script>
+</html>
