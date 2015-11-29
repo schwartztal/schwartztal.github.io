@@ -1,0 +1,47 @@
+@import url("gsdk-base.css");
+@import url("gsdk-checkbox-radio-switch.css");
+@import url("gsdk-sliders.css");
+
+#border0{
+    border-style:none;
+}
+
+#border1{
+    border-style:dotted;
+}
+
+#border2{
+    border-style:dashed;
+}
+
+#border3{
+    border-style: solid;
+}
+
+#border4{
+    border-style: double;
+}
+
+#border5{
+    border-style:groove;
+}
+
+#border6{
+    border-style:ridge;
+}
+
+#border7{
+    border-style:inset;
+}
+
+#border8{
+    border-style: outset;
+}
+
+#border9{
+    border-style:hidden;
+}
+
+
+
+

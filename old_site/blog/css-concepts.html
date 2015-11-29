@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<head>
+	<title> Tal's DBC Blog</title>
+	 <meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" href="../stylesheets/default.css">
+  	<link type="text/css" rel="stylesheet" href="../stylesheets/blog.css">
+
+</head>
+<header>
+  <nav class="header">
+    
+  <div id="top_buttons">
+    <a class="button-top" href="http://schwartztal.github.io/blog/index.html"> Blog </a>
+    <a class="button-top" href="http://schwartztal.github.io/projects.html"> Projects </a>
+    <a class="button-top" href="http://schwartztal.github.io/resume.html"> Resume </a>
+  </div>
+    <img id="profile_image" src="../imgs/profile_picture_circle.png">
+  </nav>
+  </header>
+
+<main class="posts">
+	<article>
+
+		<title> Beginning HTML & CSS - The Box Model</title>
+		<h1> The Box Model </h1>
+
+			<h2>Overview - The HTML Element Box Model</h2>
+			<p>As we wrap up week 3 of Phase0 and look back at how much we've learned (command line, git, html, css) one of the most important topics that sticks out is method for defining the size and space taken by each element of html displayed on the page. Known collectively as the Box Model, the values of size for Content, Padding, Border and Margin define the visual shape of each element along with it's negative space in relation to bordering elements. </p>
+			<p> We'll discuss in more detail shortly but it's important to remember that two of the layers in the box model refer to positive space that will be visually represented on the page (Content and Border) while the other two layers are actually negative space between other layers (Padding and Margin). This is shown in the image below:<br><br>
+			<img src="../imgs/box-model.gif"><figcaption> Representation of the CSS Box Model courtesy of www.w3schools.com</figcaption>
+		<br>
+		<h3>Content</h3>
+			<p>The simplest of the layers to define, the content of every element on the page is simply a <b>rectangular box</b>. Whether defined explicitly by <b> height </b> and <<b> width </b> or implicitly by the substance of the content and allowing the browser's rendering engine to make decisions on the fly. </p>
+		<h3>Padding</h3>
+			<p>Padding then is the space outside the edge of the content but inside the border. As with the rest of the layers it can be defined as a length by value (pixels, em, etc ) or as a relative measures of the containing element (%) for each of the 4 sides independently (top, right, bottom, left).</p>
+		<h3>Border</h3>
+			<p>The border is a layer often used to highlight the 'edge' of a piece of content visually, though it is not the actual edge of the content defined by the box model and this can be confusing when working to lay out items from a wireframe. Borders can come in many different shapes and sizes but is defined by just 3 values: width, style and color.  Each of these values can be set once for the entire border or controlled independently for each side, just like padding. Below are 10 examples showing the various border-style values which may be set:</p>
+			<div id="border0">none</div>
+			<div id="border1">dotted</div>
+			<div id="border2">dashed</div>
+			<div id="border3">solid</div>
+			<div id="border4">double</div>
+			<div id="border5">groove</div>
+			<div id="border6">ridge</div>
+			<div id="border7">inset</div>
+			<div id="border8">outset</div>
+			<div id="border9">hidden</div>
+<br>
+<p><i> Question for the reader to consider: what's the difference between a border with style "None" and style "Hidden"? How would this affect the box model and other elements?</i></p>
+<br>
+
+		<h3>Margin</h3>
+			Finally, margin is the layer on the extreme outer edge of the content and defines the negative space between the border of the element and where the next element's margin may start. Margin is defined the same way as padding, with a length for each side. </p>
+		<h3>Conclusion</h3>
+			<p>Though straightforward in defining, the box model is pretty powerful for controlling the look of elements on the page. It can however become a bit complex when considering each of the layers and sides of the box independently (as shown in the image below) a box model could have in excess of 40 values defined to make it just right.</p>
+			<img src="../imgs/boxmodel-image.png"><figcaption> Representation of the CSS Box Model courtesy of www.codeproject.com</figcaption>
+	</article>
+	
+	<footer>
+    <a class="button-bot" href="mailto:schwartztal@gmail.com"> Contact </a>
+    <a class="button-bot" href="http://schwartztal.github.io/about.html"> About Me</a>
+    <a class="button-bot" href="http://schwartztal.github.io/social.html"> Social </a>
+  </footer>
+	
+</main>
+

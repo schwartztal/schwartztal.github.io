@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Keeping Track</title>
+
+    <link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" />
+	<link href="../assets/css/get-shit-done.css" rel="stylesheet" />
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+
+    <!--     Font Awesome     -->
+    <link href="../bootstrap3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <div id="navbar">
+        <nav class="navbar navbar-default navbar-ct-blue">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <img id="profile-image" src="../imgs/profile_picture_circle.png">
+                    <a class="navbar-brand" href="http://schwartztal.github.io/index.html">Tal's Thoughts</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="http://schwartztal.github.io/blog/index.html">Blog</a></li>
+                        <li class="inactive"><a href="http://schwartztal.github.io/projects/index.html">Projects</a></li>
+                        <li class="inactive"><a href="mailto:schwartztal@gmail.com">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://schwartztal.github.io/about.html">About Me</a></li>
+                                <li><a href="http://schwartztal.github.io/social.html">Social</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.linkedin.com/in/schwartztal">LinkedIn</a></li>
+                                <li><a href="http://schwartztal.github.io/resume.html">Resume</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div><!--  end navbar -->
+
+
+<div class="main">
+    <div class="container tim-container" style="max-width:800px; padding-top:0px">
+       <h1 class="text-center">Keeping Track -  Arrays and Hashes <small class="subtitle">October 25th 2015</small></h1>
+       <p> Ruby provides two primary tools for storing collections of objects: Arrays and Hashes. In this post we'll explore both options and discuss briefly when you might want to use each</p>
+
+            <h3>Arrays</h3>
+            <p> Arrays are an ordered collection of objects (strings, integers or floats) where the index value (or key) for each object is an integer which represents its location within the list. Creating a new array is easy and can be done in a number of ways: </p>
+
+            <pre><code>
+                Empty Array:
+                new_array = Array.new
+                new_array = []
+                or initialized with values:
+                new_array = Array.new(3,2)
+                new_array = [2, 2, 2]
+            </code></pre>
+
+        <h3>Hashes</h3>
+            <p> Hashes are similiar to Arrays in Ruby but have the added flexibility of using any String as the key for the ordered object. This ability to assign objects to a self-defined key allows us to create a dictionary of sorts. Hash key-value pairs are also locatable by Integer location within the index so in a sense Arrays are just a simplified subset of Hashes. Hashes are created in a similiar way as Arrays but use the brace instead of square bracket</p>
+            <pre><code>
+                Empty Hash:
+                new_hash = Hash.new
+                new_hash = {}
+                or initialized with values:
+                new_hash = Hash.new("default value")
+                new_hash = {"key","value","key","value"}
+            </code></pre>
+
+            <h3> To Array or To Hash?</h3>
+            <p>When evaluating how to collect a set of related information stored in Ruby objects the primary consideration betwen Hashes and Arrays are whether the information needs be classified with Keys that are not just a location. In plain english, whether the more intelligent classification of a piece of information like "123 Main Street" is in fact "Address" rather than "Index location 2". <br>
+            </p>
+            <p> One other consideration that will come into play later in our exploration of written good Ruby code is that Arrays execute more quickly than Hashes because they can be indexed more efficiently. More on this topic at a future date.  </p>
+    </div>
+    <div class="space"></div>
+<!-- end container -->
+</div>
+<!-- end main -->
+
+
+
+</body>
+
+    <script src="../jquery/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="../assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+
+	<script src="../bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+<!--//<script src="assets/js/gsdk-checkbox.js"></script>
+	// <script src="assets/js/gsdk-radio.js"></script>
+	// <script src="assets/js/gsdk-bootstrapswitch.js"></script> -->
+	<script src="../assets/js/get-shit-done.js"></script>
+
+    <script src="../assets/js/custom.js"></script>
+</html>
